@@ -1,14 +1,12 @@
 #include "main.h"
 
 /**
- * print_numbers - print 0-9
+ * mul - returns product of a b
+ * @a: first int
+ * @b: second int
+ * Return: product of a & b
  */
-void print_numbers(void)
+int mul(int a, int b)
 {
-	int x;
-
-	for (x = 0; x < 10; x++)
-		_putchar(x + 48);
-
-	_putchar('\n');
+		return (a * b);
 }
