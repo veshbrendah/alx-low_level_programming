@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_diagonal - draw one new diagonal line
+ * print_diagonal - draw a diagonal line
  * @n: number of times the '\' char is printed
  * Allowed _putchar.
  */
