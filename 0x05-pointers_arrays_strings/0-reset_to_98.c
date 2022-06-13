@@ -1,11 +1,9 @@
 #include "main.h"
-
 /**
- * reset_to_98 - takes a pointer to update the value
- * @n: input
- * Return: Always 0.
+ * reset_to_98 - method that changes the value of
+ * @n: to 98
  */
-int reset_to_98(int *n)
+void reset_to_98(int *n)
 {
 	*n = 98;
 }
