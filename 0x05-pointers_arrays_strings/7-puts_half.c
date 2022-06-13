@@ -1,4 +1,4 @@
-#include "main.h"
+#include "holberton.h"
 
 /**
  * puts_half - prints half of the string
@@ -8,19 +8,13 @@
 
 void puts_half(char *str)
 {
-	int ct, even, neg;
+	int i;
 
-	for (ct = 0; str[ct] != '\0'; ct++)
-		;
-	if ((ct % 2) == 0)
+	for (i = 0; str[i] != '\0'; i++)
+	i++;
+	for (i /= 2; str[i] != '\0'; i++)
 	{
-		for (even = ct / 2; str[even] != '\0'; even++)
-			_putchar(str[even]);
-	}
-	else
-	{
-		for (neg = (ct - 1) / 2; str[neg] != '\0'; neg++)
-			_putchar(str[neg + 1]);
+		_putchar(str[i]);
 	}
 	_putchar('\n');
 }
