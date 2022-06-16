@@ -1,20 +1,20 @@
 #include "main.h"
 /**
- * main - Entry point
- * Return: Always 0 (success)
- * _putchar - writes the character c
- * 0-putchar.c - returns _putchar
+ * main - Print _putchar folowed by a new line
+ *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	char c[] = "_putchar”;
+	char str[] = "_putchar";
+	int x = 0;
 
-	int x=0;
-	while (c[x] !='\0')
+	while (str[x] != '\0')
 	{
-		putchar(c[x]);
+		_putchar(str[x]);
 		x++;
 	}
 	_putchar('\n');
+
 	return (0);
 }
