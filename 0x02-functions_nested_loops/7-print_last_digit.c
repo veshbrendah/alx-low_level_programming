@@ -1,24 +1,23 @@
 #include "main.h"
 /**
- * print_sign - check number if posive,negative or zero
- * @n: type integer
- * Return: 1 if positive, -1 if negative and 0 if zero.
+ * print_last_digit - Print the last digit of a given number
+ * @n: type integer.
+ * Return: last digit value
  */
-int print_sign(int n)
+int print_last_digit(int n)
 {
-	if (n > 0)
+	int val;
+
+	if (n < 0)
 	{
-		_putchar(43);
-		return (1);
-	}
-	else if (n < 0)
-	{
-		_putchar(45);
-		return (-1);
+		val = -1 * (n % 10);
+		_putchar(val + '0');
+		return (val);
 	}
 	else
 	{
-		_putchar('0');
-		return (0);
+		val = n % 10;
+		_putchar(val + '0');
+		return (val);
 	}
 }
