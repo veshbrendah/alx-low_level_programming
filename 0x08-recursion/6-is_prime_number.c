@@ -1,48 +1,31 @@
 #include "main.h"
-int lengthc(char *s);
-int palindrome(char str[], int st, int end);
+int prime_checker(int n, int i);
 /**
- * is_palindrome - Entry Point
- * @s: input
- * Return: 0
+ * is_prime_number - executes prime_checker
+ * @n: input to check
+ * Return: Always 0 (Success)
  */
-int is_palindrome(char *s)
+int is_prime_number(int n)
 {
-	int len;
-
-	len = lengthc(s);
-
-	if (len == 0)
+	if (n <= 1)
+		return (0);
+	else if (prime_checker(n, n / 2) > 0)
 		return (1);
-	return (palindrome(s, 0, len - 1));
-}
-
-/**
- * lengthc - finds the length count
- * @s: input
- * Return: length size
- */
-int lengthc(char *s)
-{
-	if (*s != '\0')
-		return (1 + lengthc(s + 1));
 	return (0);
 }
 
 /**
- * palindrome - checks if start and end of string matches
- * @str: string
- * @st: start of string 0
- * @end: end of string from is_palindrome, from lengthc
- * Return: if str is a palindrome
+ * prime_checker - checks for prime
+ * @n: input to check
+ * @i: n / 2, then passes to i - 1, checks if greater than 0
+ * Return: prime check
  */
-int palindrome(char str[], int st, int end)
+int prime_checker(int n, int i)
 {
-	if (st >= end)
+	if (i == 1)
 		return (1);
-	if (str[st] != str[end])
+	if (n % i == 0)
 		return (0);
-	if (st <= end || st < end + 1)
-		return (palindrome(str, st + 1, end - 1));
-	return (1);
+	else
+		return (prime_checker(n, i - 1));
 }
