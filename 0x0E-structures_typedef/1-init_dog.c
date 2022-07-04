@@ -1,24 +1,29 @@
+/**
+ * @file 1-init_dog.c
+ * @author Muhabeid (muhabeid@gmail.com)
+ * @brief 
+ * @version 0.1
+ * @date 2022-04-12
+ * 
+ * @copyright Copyright (c) 2022
+ * 
+ */
 #include "dog.h"
+#include <stdlib.h>
 
 /**
- * print_dog - prints a struct dog
- * @d: pointer to the struct dog
- *
- * Return: void
+ * init_dog - Initializes a variable of type struct dog.
+ * @d: The dog to be initialized.
+ * @name: The name of the dog.
+ * @age: The age of the dog.
+ * @owner: The owner of the dog.
  */
-
-void print_dog(struct dog *d)
+void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-	if (d != NULL)
+	if (d)
 	{
-		if (d->name != NULL)
-			printf("Name: %s\n", d->name);
-		else
-			printf("Name: (nil)\n");
-		printf("Age: %f\n", d->age);
-		if (d->owner != NULL)
-			printf("Owner: %s\n", d->owner);
-		else
-			printf("Owner: (nil)\n");
+		d->name = name;
+		d->age = age;
+		d->owner = owner;
 	}
 }
